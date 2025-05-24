@@ -1,9 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { login } from './helpers/login';
 import { InventoryPage } from '../pages/inventoryPage';
 
 test('Sort items A-Z and High to Low', async ({ page }) => {
-  await login(page);
+  await page.goto('/inventory.html');
   const inventory = new InventoryPage(page);
 
   await inventory.sortBy('az');

@@ -1,10 +1,9 @@
 import { test, expect } from '@playwright/test';
-import { login } from './helpers/login';
 import { InventoryPage } from '../pages/inventoryPage';
 import { CartPage } from '../pages/cartPage';
 
 test('Remove item from cart', async ({ page }) => {
-  await login(page);
+  await page.goto('/inventory.html');
   const inventory = new InventoryPage(page);
   const cart = new CartPage(page);
 
