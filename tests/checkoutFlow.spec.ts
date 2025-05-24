@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { login } from './helpers/login';
 
 test('Checkout flow', async ({ page }) => {
-  await login(page);
+  
+  await page.goto('/inventory.html');
   await page.click('[data-test="add-to-cart-sauce-labs-backpack"]');
   await page.click('.shopping_cart_link');
   await page.click('[data-test="checkout"]');
@@ -17,4 +17,7 @@ test('Checkout flow', async ({ page }) => {
 
   await page.click('[data-test="finish"]');
   await expect(page.locator('.complete-header')).toContainText('Thank you for your order!');
+  
 });
+
+

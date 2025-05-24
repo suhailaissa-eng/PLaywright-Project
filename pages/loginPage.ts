@@ -1,3 +1,5 @@
+import { expect } from "@playwright/test";
+
 export class LoginPage {
   constructor(public page) {}
 
@@ -6,5 +8,6 @@ export class LoginPage {
     await this.page.locator('[data-test="username"]').fill(username);
     await this.page.locator('[data-test="password"]').fill(password);
     await this.page.click('[data-test="login-button"]');
+    await expect(this.page).toHaveURL('/inventory.html')
   }
 }

@@ -1,4 +1,4 @@
-import { LoginPage } from '../../pages/loginPage'; // عدل المسار حسب مكان الملف
+import { LoginPage } from '../../pages/loginPage';
 import dotenv from 'dotenv';
 dotenv.config();
 
