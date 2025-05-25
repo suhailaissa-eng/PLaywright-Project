@@ -14,7 +14,7 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 
-  globalSetup: require.resolve('./login-setup'),
+  globalSetup: require.resolve('./global-setup'),
 
   use: {
     baseURL: 'https://www.saucedemo.com',
