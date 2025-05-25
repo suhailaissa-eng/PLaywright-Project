@@ -19,7 +19,7 @@ export default defineConfig({
   use: {
     baseURL: 'https://www.saucedemo.com',
     trace: 'on-first-retry',
-    headless: false,
+    headless: true,
     launchOptions: {
     slowMo: 400,
   },
