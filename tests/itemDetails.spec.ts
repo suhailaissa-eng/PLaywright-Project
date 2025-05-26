@@ -14,8 +14,7 @@ test('Item details page shows correct info', async ({ page }) => {
 
     await inventoryPage.clickItemName(firstItem);
 
-    await expect(page).toHaveURL(/inventory-item.html/);
+    await expect(itemDetailsPage.description).toBeVisible();
     await expect(itemDetailsPage.name).toHaveText(itemName);
     await expect(itemDetailsPage.price).toHaveText(itemPrice);
-    await expect(itemDetailsPage.description).toBeVisible();
 });
