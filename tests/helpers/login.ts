@@ -1,4 +1,4 @@
-import { LoginPage } from '../../pages/loginPage';
+import { LoginPage } from '../../pages/LoginPage';
 import dotenv from 'dotenv';
 dotenv.config();
 
